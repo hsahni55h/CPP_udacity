@@ -50,17 +50,17 @@ int main() {
     /***********************************************
     *  Overflow example
     **********************************************/
-    short value1 {30000};
-    short value2 {1000};
-    short  product {value1 * value2};
+    // short value1 {30000};
+    // short value2 {1000};
+    // short  product {value1 * value2};
     
-    cout << "The product of " << value1 <<  " and " << value2 << " is " <<  product << endl;
+    // cout << "The product of " << value1 <<  " and " << value2 << " is " <<  product << endl;
     
 
-    // unsigned short value1 {30000};
-    // unsigned short value2 {1000};
-    // unsigned short product {static_cast<unsigned short>(value1 * value2)};
-    // cout << "The product of " << value1 << " and " << value2 << " is " << product << endl;
+    unsigned short value1 {30000};
+    unsigned short value2 {1000};
+    unsigned short product {static_cast<unsigned short>(value1 * value2)};
+    cout << "The product of " << value1 << " and " << value2 << " is " << product << endl;
 
     
     return 0;
