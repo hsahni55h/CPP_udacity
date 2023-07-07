@@ -1,6 +1,3 @@
-// Section 6
-// Declaring and initializing variables
-#include <iostream>
 
 using namespace std;
 
