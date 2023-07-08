@@ -3,12 +3,10 @@
 #include <string>
 using namespace std;
 
-int main() 
-
+void ReadBoardFile(string file) 
 {
-
     ifstream my_file;
-    my_file.open("board file/board");
+    my_file.open(file);
 
     if (my_file) 
     {
@@ -21,3 +19,10 @@ int main()
         }
     }
 }
+
+
+int main() 
+{
+    ReadBoardFile("board file/board");
+}
+
