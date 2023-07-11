@@ -49,23 +49,27 @@ vector<vector<State>> ReadBoardFile(string path)
 }
 
 //--------------------------------------------------------------------------
-
-// TODO: Write the Search function stub here.
-// Write a Search stub which takes a board grid 
-// and two length 2 int arrays as arguments. The int 
-// arrays represent the start and goal coordinates 
-// for the search. The function should print ""No path found!" 
-// and return an empty std::vector<vector<State>>. 
-// The function will later return the board with a path 
-// from the start to the goal. In main(), call Search with a start 
-// of {0, 0} and a goal of {4, 5}. Store the results in the
-// variable solution. Pass solution to PrintBoard.
-
 vector<vector<State>> Search (vector<vector<State>> board, int start[2], int goal[2])
 {
     cout << " No path found!" << "\n";
     vector<vector<State>> v = {{}};
     return v;
+}
+
+//--------------------------------------------------------------------------
+
+/*
+Write a Heuristic function which takes four ints 
+as arguments. The ints represent two pairs of 2D 
+coordinates: (x1, y1, x2, y2). The function 
+should return an int which is the Manhattan Distance 
+from one coordinate to the other: ∣x2 − x1∣ + ∣y2 − y1∣
+*/
+int Heuristic(int x1, int y1, int x2, int y2)
+{
+    float distance;
+    distance = abs(x2 - x1) + abs(y2 - y1);
+    return distance;
 }
 
 //--------------------------------------------------------------------------
@@ -100,14 +104,39 @@ void PrintBoard(vector<vector<State>> board)
 
 //--------------------------------------------------------------------------
 
+void TestHeuristic() 
+{
+  cout << "----------------------------------------------------------" << "\n";
+  cout << "Heuristic Function Test: ";
+  if (Heuristic(1, 2, 3, 4) != 4) 
+  {
+    cout << "failed" << "\n";
+    cout << "\n" << "Heuristic(1, 2, 3, 4) = " << Heuristic(1, 2, 3, 4) << "\n";
+    cout << "Correct result: 4" << "\n";
+    cout << "\n";
+  } 
+  else if (Heuristic(2, -1, 4, -7) != 8) 
+  {
+    cout << "TestHeuristic Failed" << "\n";
+    cout << "\n" << "Heuristic(2, -1, 4, -7) = " << Heuristic(2, -1, 4, -7) << "\n";
+    cout << "Correct result: 8" << "\n";
+    cout << "\n";
+  } 
+  else 
+  {
+    cout << "passed" << "\n";
+  }
+  cout << "----------------------------------------------------------" << "\n";
+}
+
+//--------------------------------------------------------------------------
+
 int main() 
 {
-    // TODO: Declare 2D "init" and "goal" arrays with values {0, 0} and {4, 5} respectively.
     vector<vector<State>> board = ReadBoardFile("1.board");
     int start [2] = {0, 0};
     int goal [2] = {4, 5};
-    // TODO: Call Search with "board", "init", and "goal". Store the results in the variable "solution".
     vector<vector<State>> path = Search (board, start, goal);
-    // TODO: Change the following line to pass "solution" to PrintBoard.
     PrintBoard(path);
+    TestHeuristic();
 }
