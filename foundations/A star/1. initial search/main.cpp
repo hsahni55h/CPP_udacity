@@ -103,7 +103,7 @@ void PrintBoard(vector<vector<State>> board)
 int main() 
 {
     // TODO: Declare 2D "init" and "goal" arrays with values {0, 0} and {4, 5} respectively.
-    vector<vector<State>> board = ReadBoardFile("1.board");
+    vector<vector<State>> board = ReadBoardFile("board file/board");
     int start [2] = {0, 0};
     int goal [2] = {4, 5};
     // TODO: Call Search with "board", "init", and "goal". Store the results in the variable "solution".

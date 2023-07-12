@@ -133,7 +133,7 @@ void TestHeuristic()
 
 int main() 
 {
-    vector<vector<State>> board = ReadBoardFile("1.board");
+    vector<vector<State>> board = ReadBoardFile("board file/board");
     int start [2] = {0, 0};
     int goal [2] = {4, 5};
     vector<vector<State>> path = Search (board, start, goal);
