@@ -4,7 +4,12 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+using std::abs;
+using std::ifstream;
+using std::istringstream;
+using std::sort;
+using std::string;
+using std::vector;
 using namespace std;
 
 
@@ -166,6 +171,25 @@ void PrintBoard(vector<vector<State>> board)
           cout << CellString(i);
         }
         cout << "\n";
+    }
+
+}
+
+//--------------------------------------------------------------------------
+// TODO: Write CheckValidCell here. Check that the
+// cell is on the grid and not an obstacle (i.e. equals kEmpty).
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid)
+{
+    bool on_grid_x = (x >= 0 && x < grid.size());
+    bool on_grid_y = (y >= 0 && y < grid.size());
+
+    if (on_grid_x && on_grid_y)
+    {
+        return grid[x][y] == State::kEmpty;
+    }
+    else
+    {
+        return false;
     }
 
 }
