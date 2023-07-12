@@ -194,6 +194,44 @@ bool CheckValidCell(int x, int y, vector<vector<State>> &grid)
 
 }
 
+//--------------------------------------------------------------------------
+/** 
+ * Expand current nodes's neighbors and add them to the open list.
+ */
+// TODO: ExpandNeighbors(arguments) {
+
+// TODO: Get current node's data.
+
+// TODO: Loop through current node's potential neighbors.
+
+// TODO: Check that the potential neighbor's x2 and y2 values are on the grid and not closed.
+
+// TODO: Increment g value, compute h value, and add neighbor to open list.
+
+// } TODO: End the function
+
+void ExpandNeighbors(const vector<int> &current,  int goal[2], vector<vector<int>> &open, vector<vector<State>> &grid)
+{
+    // directional deltas
+    const int delta[4][2]{{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+    int x1 = current[0];
+    int y1 = current[1];
+    int g1 = current[2];
+    int h1 = Heuristic(x1, y1, goal[0], goal[1]);
+    for (auto i : delta)
+    {
+        int x2 = x1 + i[0];
+        int y2 = y1 + i[1];
+        if(CheckValidCell(x2, y2, grid ))
+        {
+            int g2 = g1 + 1;
+            int h2 = Heuristic(x2, y2, goal[0], goal[1]);
+            AddToOpen(x2, y2, g2, h2, open, grid );
+        }
+    }
+}
+
+
 //------------------------------TESTS--------------------------------------------
 
 void PrintVector(vector<int> v)
