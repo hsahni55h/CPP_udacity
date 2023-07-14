@@ -78,3 +78,73 @@ int main() {
     cout << "The new value of the variable i is                     : " << i << "\n";
     cout << "The value of the variable pointed to by pointer_to_i is: " << *pointer_to_i << "\n";
 }
+
+//-----------------------Pointers to Other Object Types-------------------------------
+
+#include <iostream>
+#include <vector>
+using std::cout;
+using std::vector;
+
+int main() 
+{
+    vector<int> v {1, 2, 3};
+    
+    // Declare and initialize a pointer to the address of v here:
+    vector<int> *pointer_to_v = &v;
+    for (int a: v) {
+        cout << a << "\n";
+    }
+    
+    // Dereference your pointer to v and print the int at index 0 here:
+    cout << "The first element of v is:  "  << (*pointer_to_v)[0] << "\n";
+}
+
+//--------------------Passing Pointers to a Function----------------------------------
+
+
+#include <iostream>
+using std::cout;
+
+void AddOne(int* j)
+{
+    // Dereference the pointer and increment the int being pointed to.
+    (*j)++;
+}
+
+int main() 
+{
+    int i = 1;
+    cout << "The value of i is: " << i << "\n";
+    
+    // Declare a pointer to i:
+    int* pi = &i;
+    AddOne(pi);
+    cout << "The value of i is now: " << i << "\n";
+}
+
+//--------------------Returning a Pointer from a Function----------------------------------
+
+
+#include <iostream>
+using std::cout;
+
+int* AddOne(int& j) 
+{
+    // Increment the referenced int and return the
+    // address of j.
+    j++;
+    return &j;
+}
+
+int main() 
+{
+    int i = 1;
+    cout << "The value of i is: " << i << "\n";
+    
+    // Declare a pointer and initialize to the value
+    // returned by AddOne:
+    int* my_pointer = AddOne(i);
+    cout << "The value of i is now: " << i << "\n";
+    cout << "The value of the int pointed to by my_pointer is: " << *my_pointer << "\n";
+}
