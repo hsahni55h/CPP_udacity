@@ -1,4 +1,3 @@
-// Section 11
 // Scope example
 #include <iostream>
 
@@ -53,7 +52,7 @@ int main() {
     global_example();
     
     static_local_example();
-//    static_local_example();
+    static_local_example();
 //    static_local_example();
 
     cout << endl;
