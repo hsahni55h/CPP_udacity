@@ -1,4 +1,4 @@
 #in root dir
-git add *
+git add .
 git commit -m "commit"
 git push 
