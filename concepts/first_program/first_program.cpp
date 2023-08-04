@@ -5,6 +5,7 @@ using namespace std;
  
 int main()
 {
-    cout << "Learning C++";
+    cout << "Learning C++"<<endl;
     return 0;
 }
+
