@@ -1,3 +1,8 @@
-# Ignore executables (files without extensions)
+# Ignore executables
+*.o
+*.out
+
+# Ignore the "build" directory
+/build/
 
 #.vscode/
