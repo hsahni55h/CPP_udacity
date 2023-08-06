@@ -1,4 +1,4 @@
-# Makefile for Section 12 - Simple pointers
+# Simple pointers
 
 # Compiler
 CC = g++
