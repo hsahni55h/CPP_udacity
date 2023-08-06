@@ -35,3 +35,12 @@ int main() {
     return 0;
 }
 
+// Susbscript Notation
+    // array_name[index]
+    // pointer_name[index]
+
+
+// Offset notation
+
+    // *(array_name + index)
+    // *(pointer_name + index)
