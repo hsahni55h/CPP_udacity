@@ -1,4 +1,3 @@
-// Section 12
 // Pointer Arithmetic
 
 #include <iostream>

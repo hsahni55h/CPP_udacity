@@ -1,4 +1,3 @@
-// Section 12
 // Dereferencing
 
 #include <iostream>
