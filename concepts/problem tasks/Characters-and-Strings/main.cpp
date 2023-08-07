@@ -50,8 +50,8 @@ int main()
     cout << "\nEncrypting Message..." << endl;
     for (char c: secret_message)
     {
-        size_t position = alphabet.find(c);
-        if (position != string::npos)
+        size_t position = alphabet.find(c); //find() returns the index (position) of the first occurrence of the character in the string
+        if (position != string::npos) //If the character is not found, it returns a special constant value std::string::npos.
         {
             char new_char { key.at(position)};
             encrypted_message += new_char;
@@ -88,3 +88,12 @@ int main()
     return 0;
 }
 
+/*
+
+npos stands for "no position" or "not found" position. 
+It's a constant value used in contexts where an index or position is expected but cannot be determined or is invalid. 
+This is often used in the context of searching, indexing, and iterating over data structures like strings, arrays, and lists.
+The primary purpose of npos is to provide a consistent and recognizable value to indicate that a certain operation didn't produce a valid or expected result. 
+It helps programmers handle error cases without resorting to arbitrary or sentinel values that might lead to confusion or bugs.
+
+*/
