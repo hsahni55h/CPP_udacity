@@ -25,7 +25,7 @@ void reverse_array(int array[], int size)
     }
 }
 
-void print_array(int *array, int size)
+void print_array(int* array, int size)
 {
     int *array_size = array + size;
     int *position = array;
