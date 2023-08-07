@@ -1,7 +1,3 @@
-
-
-// Section 10
-// Challenge - 
 // Substitution Cipher
 
 /*

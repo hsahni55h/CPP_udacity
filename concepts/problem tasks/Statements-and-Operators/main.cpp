@@ -1,4 +1,3 @@
-// Section 8 Challenge
 /*
 	For this program I will be using US dollars and cents.
 	

@@ -1,7 +1,4 @@
-/*  Section 7
-    Challenge
-    
-    Write a C++ program as follows:
+/*  Write a C++ program as follows:
     
     Declare 2 empty vectors of integers named
     vector1 and vector 2, respectively.

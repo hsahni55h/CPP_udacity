@@ -1,6 +1,3 @@
-// Section 6
-// Challenge
-
 /* 
     Frank's Carpet Cleaning Service
     Charges:
