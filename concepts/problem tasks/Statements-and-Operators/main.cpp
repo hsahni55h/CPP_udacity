@@ -1,3 +1,4 @@
+// Section 8 Challenge
 /*
 	For this program I will be using US dollars and cents.
 	
@@ -37,75 +38,56 @@
 using namespace std;
 
 int main() {
-    
-    // define conversion values in cents
-    const int dollar_value {100};
-    const int quarter_value {25};
-    const int dime_value {10};
-    const int nickel_value {5};
-    
-    int change_amount {};
-        
-    // Solution 1 - not using the modulo operator
-    
-    cout << "Enter an amount in cents : ";
-    cin >> change_amount;
-    
+	int change_amount;
+	const int dollar_value{100};
+	const int quarters_value{25};
+	const int dimes_value{10};
+	const int nickels_value{5};
+	
+	
+	cout<< "The conversion is as follows :" <<endl;
+	cout << " In the US:"<<endl;
+	cout <<" 1 dollar is 100 cents"<<endl;
+	cout <<	" 1 quarter is 25 cents"<<endl;
+	cout <<	" 1 dime is 10 cents"<<endl;
+	cout <<	" 1 nickel is 5 cents, and"<<endl;
+	cout <<	" 1 penny is 1 cent."<<endl;
+		
+
+	cout <<"Enter an amount in cents : ";
+	cin >> change_amount;
+
+	
     int balance{}, dollars{}, quarters {}, dimes{}, nickels{}, pennies{};
-      
-    dollars = change_amount / dollar_value;    
-    balance = change_amount - (dollars * dollar_value);     
     
-    quarters =  balance / quarter_value;
-    balance -= quarters * quarter_value;
+	dollars = change_amount/dollar_value;
+	balance = change_amount-(dollars*dollar_value);
+	
+	quarters = balance/quarters_value;
+	balance = balance - quarters*quarters_value;
+	//balance -= quarters * quarters_value;
 
-    dimes = balance / dime_value;
-    balance -= dimes * dime_value;
+	dimes = balance/dimes_value;
+	balance = balance - dimes*dimes_value;
+	//balance -= dimes * dimes_value;
+	
+	nickels = balance/nickels_value;
+	balance = balance - nickels*nickels_value;
+	//balance -= nickels * nickels_value;
+	
+	pennies = balance;
 
-    nickels = balance / nickel_value;
-    balance -= nickels * nickel_value;
-
-    pennies = balance;
-    
-    cout << "\nYou can provide this change as follows : " << endl;
-    cout << "dollars  : " << dollars << endl;
-    cout << "quarters : " << quarters << endl;
-    cout << "dimes    : " << dimes << endl;
-    cout << "nickels  : " << nickels << endl;
-    cout << "pennies  : " << pennies << endl;
-
-//  End of Solution 1
-
-// Solution 2 - using the modulo operator
-
-    // cout << "----------------------------" << endl;
-    // cout << "Solution using the modulo operator" << endl;
-    // cout << "----------------------------" << endl;
-
-    // balance = dollars = quarters = dimes = nickels = pennies = 0;  // reset everthing to zero
-
-    // dollars = change_amount / dollar_value;   
-    // balance = change_amount % dollar_value;
-    
-    // quarters = balance / quarter_value;
-    // balance %= quarter_value;
-    
-    // dimes = balance / dime_value;
-    // balance %= dime_value;
-    
-    // nickels = balance / nickel_value;
-    // balance %= nickel_value;
-    
-    // pennies = balance;
-
-    // cout << "\nYou can provide this change as follows : " << endl;
-    // cout << "dollars  : " << dollars << endl;
-    // cout << "quarters : " << quarters << endl;
-    // cout << "dimes    : " << dimes << endl;
-    // cout << "nickels  : " << nickels << endl;
-    // cout << "pennies  : " << pennies << endl;
-
-    // cout << endl;
+	cout<< "Change can be provided as follow : "<< endl;
+	cout<< "dollars :" << dollars <<endl;
+	cout<< "quarters :" << quarters <<endl;
+	cout<< "dimes :" << dimes <<endl;
+	cout<< "nickels :" << nickels <<endl;
+	cout<< "pennies :" << pennies <<endl;
+	
+    cout << endl;
     return 0;
 }
+
+
+
 
