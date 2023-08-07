@@ -69,3 +69,4 @@ A value thats not an l-value
 are on the right hand side of the assignment expression
 a literal
 a temporary which is intended to be non-modifiable
+r values can be assigned to l-values explicitly
