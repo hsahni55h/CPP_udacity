@@ -1,5 +1,3 @@
-// Section 9
-// Challenge
 /*    
     This challenge is about using a collection (list) of integers and allowing the user
     to select options from a menu to perform operations on the list.
