@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     
     int num {100};
-    int &ref {num};
+    int &ref {num};     //reference (alias to num)
     
     cout << num << endl;
     cout << ref << endl;
