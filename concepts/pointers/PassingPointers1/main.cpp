@@ -1,4 +1,3 @@
-// Section 12
 // Passing Pointers 1
 #include <iostream>
 
