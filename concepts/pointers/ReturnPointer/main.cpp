@@ -34,3 +34,5 @@ int main() {
     delete [] my_array;
     return 0;
 }
+
+
